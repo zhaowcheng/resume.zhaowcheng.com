@@ -1,0 +1,24 @@
+# Theme customization is done on this file instead of _config.yml so that
+# you don't have to restart Jekyll to see changes.
+
+photo: "images/avatar.jpg"
+name: "赵万成"
+age: "32"
+education: "本科"
+job: "测试开发"
+tel: "186 8362 0830"
+mail: "zhaowcheng@163.com"
+homepage: "https://zhaowcheng.com"
+copy: "本人有 8 年工作经验，干过开发和测试，擅长自动化测试和持续集成，开发过自动化测试框架（Python），搭建过 CICD 流程（Jenkins），接触过存储、数通和数据库行业，现居重庆，以远程办公方式就职于瀚高基础软件。"
+
+# Color scheme based on http://www.materialui.co/colors.
+# Possible values:
+# - default
+# - red
+# - pink
+# - brown
+# - blue
+# - purple
+# - teal
+# - green
+color: default

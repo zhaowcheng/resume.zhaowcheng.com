@@ -1,0 +1,76 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ "/stylesheets/resumecards.css" | prepend:site.baseurl }}">
+    <title>
+        简历-{{ site.data.resume.name }}-{{ site.data.resume.job }}
+    </title>
+  </head>
+  <body>
+    <div class="container resume-content">
+      <div class="row">
+        <div class="col-sm-8 clearfix">
+          <figure class="resume-pic">
+            <img src="{{ site.data.resume.photo }}" class="img-rounded" width="120" height="120">
+          </figure>
+          <div class="resume-baseinfo">
+            <h1>{{ site.data.resume.name }}</h1>
+            <p>{{ site.data.resume.copy }}</p>
+          </div>
+        </div>
+        <div class="col-sm-4 resume-contact">
+          <p>年龄：{{ site.data.resume.age }}</p>
+          <p>学历：{{ site.data.resume.education }}</p>
+          <p>电话：<a href="tel:{{ site.data.resume.tel }}" target="_blank">{{ site.data.resume.tel }}</a></p>
+          <p>邮箱：<a href="mailto:{{ site.data.resume.mail }}" target="_blank">{{ site.data.resume.mail }}</a></p>
+          <p>主页：<a href="{{ site.data.resume.homepage }}" target="_blank">{{ site.data.resume.homepage }}</a></p>
+        </div>
+      </div>
+      <div class="row">
+        {% for card in site.posts reversed %}
+          <div class="col-sm-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">{{ card.type }}</h3>
+              </div>
+              <div class="panel-body">
+                {% if card.heading %}
+                  <h4>
+                    {{ card.heading }}
+                  </h4>
+                {% endif %}
+                {% if card.subheading %}
+                  <p class="resume-subheading">
+                    {{ card.subheading }}
+                  </p>
+                {% endif %}
+                {% if card.duration %}
+                  <p class="resume-duration">
+                    {{ card.duration }}
+                  </p>
+                {% endif %}
+                {% if card.location %}
+                  <p class="resume-location">
+                    {{ card.location }}
+                  </p>
+                {% endif %}
+                {{ card.content }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="hidden-print resume-view-pdf"><a href="{{ "/resume.pdf" | prepend:site.baseurl }}" class="btn btn-primary btn-lg" download="简历-{{ site.data.resume.name }}-{{ site.data.resume.job }}.pdf">下载 PDF</a></div>
+    </div>
+    <script src="{{ "/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/javascripts/resumecards.js" | prepend:site.baseurl }}"></script>
+  </body>
+</html>

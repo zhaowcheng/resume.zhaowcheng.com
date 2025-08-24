@@ -1,2 +1,6 @@
 .sass-cache
-Gemfile.lock
+.bundle
+.gem
+_site
+.vscode
+.claude

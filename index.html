@@ -68,7 +68,7 @@
         {% endfor %}
       </div>
       <div class="hidden-print resume-view-pdf">
-          <a href="{{ "/resume.pdf" | prepend:site.baseurl }}" class="btn btn-primary btn-lg" id="download-btn">下载 PDF</a>
+        <a href="{{ "/resume.pdf" | prepend:site.baseurl }}" class="btn btn-primary btn-lg" download="简历-{{ site.data.resume.name }}-{{ site.data.resume.job }}.pdf">下载 PDF</a>
       </div>
     </div>
     <script src="{{ "/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>

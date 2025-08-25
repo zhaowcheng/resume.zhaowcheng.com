@@ -4,5 +4,6 @@ exclude:
   - "CNAME"
   - "Gemfile"
   - "Gemfile.lock"
-  - "tools"
+  - "tools/"
   - "flake.*"
+  - "vendor/"

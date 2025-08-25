@@ -74,11 +74,6 @@
     <script src="{{ "/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/javascripts/resumecards.js" | prepend:site.baseurl }}"></script>
-    <script>
-      document.getElementById('download-btn').addEventListener('click', function(e) {
-          this.download = '简历-{{ site.data.resume.name }}-{{ site.data.resume.job }}.pdf';
-      });
-    </script>
     <!-- Vercel Web Analytics -->
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };

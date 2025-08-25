@@ -7,4 +7,3 @@ exclude:
   - "tools/"
   - "flake.*"
   - "vendor/"
-encoding: utf-8

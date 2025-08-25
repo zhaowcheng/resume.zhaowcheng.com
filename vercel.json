@@ -4,5 +4,6 @@
       "JEKYLL_ENV": "production"
     }
   },
-  "buildCommand": "bundle exec jekyll build"
+  "buildCommand": "bundle exec jekyll build",
+  "outputDirectory": "_site"
 }
